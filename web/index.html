@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rilable Web</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">Rilable</div>
+    <button id="newProject" class="new">+ New Project</button>
+    <div id="projects" class="projects"></div>
+    <div class="sidebar-bottom">Web Preview</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="title">New Project</h1>
+        <span class="status"><i></i> Ready</span>
+      </div>
+      <a class="github" href="https://github.com/rbrown101010/rilable" target="_blank" rel="noreferrer">GitHub</a>
+    </header>
+
+    <section class="workspace">
+      <div class="panel chat">
+        <div id="messages" class="messages">
+          <div class="empty">
+            <div class="logo">R</div>
+            <h2>Build with Rilable</h2>
+            <p>Describe what you want to create, then send your prompt.</p>
+          </div>
+        </div>
+        <form id="promptForm" class="composer">
+          <textarea id="prompt" placeholder="Describe your app..." rows="3"></textarea>
+          <div class="composer-row">
+            <span>Static web preview</span>
+            <button>Send</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel preview">
+        <div class="preview-head">
+          <strong>Preview</strong>
+          <button id="refresh">Refresh</button>
+        </div>
+        <iframe id="frame" title="Rilable preview" sandbox="allow-scripts"></iframe>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
